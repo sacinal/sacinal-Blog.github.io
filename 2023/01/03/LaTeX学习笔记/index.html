@@ -1,0 +1,392 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>latex | 网站</title><meta name="author" content="除草剂"><meta name="copyright" content="除草剂"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="一个latex简单的语法总结关于latex的环境，我本人使用的是overleaf,关于texlive等软件的配置与使用请寻找其他教程原文见这里编辑数学公式：latex公式编辑器官方教程文档：latexlive 声明1\documentclass[UTF8]&amp;#123;ctexart&amp;#125; 声明了文章编码和使用的语言 导入包相当于在说：“我要开始写文章” 123\usepackage&amp;#123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="latex">
+<meta property="og:url" content="https://www.sacinal.com/2023/01/03/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="网站">
+<meta property="og:description" content="一个latex简单的语法总结关于latex的环境，我本人使用的是overleaf,关于texlive等软件的配置与使用请寻找其他教程原文见这里编辑数学公式：latex公式编辑器官方教程文档：latexlive 声明1\documentclass[UTF8]&amp;#123;ctexart&amp;#125; 声明了文章编码和使用的语言 导入包相当于在说：“我要开始写文章” 123\usepackage&amp;#123">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.sacinal.com/139704027.jpg">
+<meta property="article:published_time" content="2023-01-03T13:30:18.447Z">
+<meta property="article:modified_time" content="2023-01-17T14:46:13.504Z">
+<meta property="article:author" content="除草剂">
+<meta property="article:tag" content=".*">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.sacinal.com/139704027.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.sacinal.com/2023/01/03/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'latex',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-17 22:46:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tvax3.sinaimg.cn/crop.0.0.600.600.180/008jCdW0ly8h0uorst9t2j30go0gowh2.jpg?KID=imgbed,tva&amp;Expires=1669884832&amp;ssig=d1gkW4Dhau" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 自溜</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/9b35182a38.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">网站</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 自溜</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">latex</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2023-01-17T14:46:13.504Z" title="更新于 2023-01-17 22:46:13">2023-01-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="latex"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一个latex简单的语法总结"><a href="#一个latex简单的语法总结" class="headerlink" title="一个latex简单的语法总结"></a>一个latex简单的语法总结</h1><p><strong>关于latex的环境，我本人使用的是<a href="www.overleaf.com">overleaf</a>,关于texlive等软件的配置与使用请寻找其他教程</strong><br><strong>原文见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43301333/article/details/106365391">这里</a></strong><br>编辑数学公式：<a target="_blank" rel="noopener" href="https://www.latexlive.com/">latex公式编辑器</a><br>官方教程文档：<a target="_blank" rel="noopener" href="https://www.latexlive.com/help">latexlive</a></p>
+<h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[UTF8]&#123;ctexart&#125;</span><br></pre></td></tr></table></figure>
+<p>声明了文章编码和使用的语言</p>
+<h3 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h3><p>相当于在说：“我要开始写文章”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;mathtools,wallpaper&#125;</span><br><span class="line">\usepackage&#123;t1enc&#125;</span><br><span class="line">\usepackage&#123;pagecolor&#125;</span><br></pre></td></tr></table></figure>
+<p>可以一次性导入全部宏，每个包之间用逗号分隔；也可以一行行导入，用到什么导什么。</p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>相当于在说：“我正在写文章”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line">	文章</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>文章的body，也是接下来介绍的</p>
+<h2 id="开始写文章"><a href="#开始写文章" class="headerlink" title="开始写文章"></a>开始写文章</h2><h3 id="maketitle"><a href="#maketitle" class="headerlink" title="maketitle"></a>maketitle</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\title&#123;标题\LaTeX&#125;  </span><br><span class="line">\author&#123;xxx&#125;</span><br><span class="line">\date&#123;62-50-0202&#125;</span><br><span class="line">\maketitle</span><br></pre></td></tr></table></figure>
+<p>注意：<br>\maketitle一定要加上，不然显示不了<br>\date{62-50-0202}可以不加，会默认显示写作时间，如果不想显示，直接\date{}</p>
+<h3 id="章节"><a href="#章节" class="headerlink" title="章节"></a>章节</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\section&#123;\LaTeX 的使用&#125;</span><br><span class="line">\subsection&#123;\LaTeX 的基本知识&#125;</span><br><span class="line">\subsubsection&#123;\LaTeX 的结构&#125;</span><br></pre></td></tr></table></figure>
+<p>\LaTeX是属于LaTeX的一个特殊符号</p>
+<p>分章节，一般都是无脑sub,但是注意，最多到\subsubsection，没有\subsubsubsection,如果你还想在\subsubsection以下分段的话，只能选择\paragraph：<br>比方说：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\section&#123;Introduction&#125;</span><br><span class="line">There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.</span><br><span class="line">There is another theory which states that this has already happened.</span><br><span class="line">\subsection&#123;subsection&#125;</span><br><span class="line">I am subsection.</span><br><span class="line"></span><br><span class="line">\subsubsection&#123;subsubsection&#125;</span><br><span class="line">I am subsubsection.</span><br><span class="line"></span><br><span class="line">\paragraph&#123;P1&#125; I am paragraph one.</span><br><span class="line"></span><br><span class="line">\paragraph&#123;P2&#125; I am paragraph two.</span><br></pre></td></tr></table></figure>
+<p>可以看到\paragraph的作用只是另起一段并在开头添加了粗体的段标题，后面的文字将会紧跟标题，不会像section一样另起一段。同时可以看到左下角的outline</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>接下来是列表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">\item 第一条</span><br><span class="line">\item 第二条</span><br><span class="line">\item 第三条</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+<p>和body最外面套的document环境一样，\begin {…} \end{…}把一段内容圈到对应环境里面,enumerate就表示列表（枚举）</p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>想要达到两段文字之间换行的效果，两段文字之间必须要有一个空行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行</span><br><span class="line"></span><br><span class="line">第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行</span><br></pre></td></tr></table></figure>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>\ +”…”表示将某个字符转义为原来的样子显示，如{}、&amp;等具有特殊含义的字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\&#123;显示大括号\\&#125;</span><br></pre></td></tr></table></figure>
+<p>要注意\这个符号的转义有点麻烦:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\verb|\|</span><br></pre></td></tr></table></figure>
+
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h3 id="黑体"><a href="#黑体" class="headerlink" title="黑体"></a>黑体</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\textbf&#123;我黑了&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;\normalsize 不大&#125;</span><br><span class="line">	</span><br><span class="line">&#123;\large 大&#125;</span><br><span class="line">	</span><br><span class="line">&#123;\Large 大大&#125;</span><br><span class="line">	</span><br><span class="line">&#123;\LARGE 大大大&#125;</span><br><span class="line">	</span><br><span class="line">&#123;\huge 大大大大&#125;</span><br><span class="line">	</span><br><span class="line">&#123;\Huge 大大大大大&#125;</span><br></pre></td></tr></table></figure>
+<p>2.1.3 字体</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;\songti 宋体&#125;</span><br><span class="line">&#123;\youyuan 幼圆&#125;</span><br></pre></td></tr></table></figure>
+<p>中国人专属，拼音还不会，可自行百度</p>
+<h3 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;center&#125;</span><br><span class="line">	夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则</span><br><span class="line">\end&#123;center&#125;</span><br></pre></td></tr></table></figure>
+<p>还是在一个环境里面，用center夹住</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%%%要运行两次：第一次加载，第二次新增的条目才能显示</span><br><span class="line">\tableofcontents</span><br></pre></td></tr></table></figure>
+<p>目录会自动解析文章的section和列表，并动态标号</p>
+<h2 id="页"><a href="#页" class="headerlink" title="页"></a>页</h2><h3 id="另起一页"><a href="#另起一页" class="headerlink" title="另起一页"></a>另起一页</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">%%%想要另起一页</span><br><span class="line">\newpage</span><br><span class="line"></span><br><span class="line">%%%一般下面这种用的多</span><br><span class="line">\clearpage</span><br></pre></td></tr></table></figure>
+<h3 id="页号"><a href="#页号" class="headerlink" title="页号"></a>页号</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\pagestyle&#123;empty&#125;%%整篇文章不显示</span><br><span class="line"></span><br><span class="line">\thispagestyle&#123;empty&#125;%%仅当前页</span><br><span class="line"></span><br><span class="line">\setcounter&#123;page&#125;&#123;1&#125;%%页号从正文开始</span><br></pre></td></tr></table></figure>
+<p>页号默认在右上角，如果想让页号出现在下方：自行百度</p>
+<ol>
+<li>公式<br>3.1 普通公式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   \begin&#123;equation&#125;</span><br><span class="line">girlfriends=money*face</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>想要没有右边的标号：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">girlfriends=money*face \notag</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+<p>不仅可以直接\notag，上述这种没标号的，还可以有多种其他的写法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation*&#125;</span><br><span class="line">girlfriends=money*face</span><br><span class="line">\end&#123;equation*&#125;</span><br><span class="line">	</span><br><span class="line">\[</span><br><span class="line">girlfriends=money*face</span><br><span class="line">\]</span><br></pre></td></tr></table></figure>
+<h2 id="换行公式"><a href="#换行公式" class="headerlink" title="换行公式"></a>换行公式</h2><p>普通公式在一个环境里不支持\换行，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">girlfriends=money*face1 \\</span><br><span class="line">boyfriends=face^n </span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+<p>需要用到align换行公式</p>
+<p>%换行公式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align&#125;</span><br><span class="line">girlfriends=money*face \notag \\ %%如果想要这一行没标号的话，notag要加在\\之前</span><br><span class="line">boyfriends=face^n </span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure>
+<p>还可以使用&amp;实现行间对齐：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align&#125;</span><br><span class="line">&amp;girlfriends=money*face \notag \\ </span><br><span class="line">&amp;boyfriends=face^n </span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h2><p>用$ $实现文字内部插入公式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个众所周知的定理：$girlfriends=money*face$，所以你只能在这里写博客</span><br></pre></td></tr></table></figure>
+
+<p>注意的是，现在latex最好不要用$ $这种行内公式写法，最好使用\( \)的写法。同样行间公式也应该用\[ \]</p>
+<h2 id="公式命令"><a href="#公式命令" class="headerlink" title="公式命令"></a>公式命令</h2><p>另外在打复杂的公式的时候可以把光标移到公式上，LaTeX会提前对公式自动解析显示，防止疏忽</p>
+<h2 id="矩阵和大括号"><a href="#矩阵和大括号" class="headerlink" title="矩阵和大括号"></a>矩阵和大括号</h2><p>需要导入宏包mathtools</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation*&#125;</span><br><span class="line">A=\begin&#123;bmatrix&#125;</span><br><span class="line">1&amp;2&amp;3\\</span><br><span class="line">4&amp;5&amp;6</span><br><span class="line">\end&#123;bmatrix&#125;</span><br><span class="line">\end&#123;equation*&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation*&#125;</span><br><span class="line">y=\begin&#123;cases&#125;</span><br><span class="line">&amp;\lambda e^&#123;-\lambda x&#125; \\</span><br><span class="line">&amp;0</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">\end&#123;equation*&#125;</span><br></pre></td></tr></table></figure>
+<p>上述这种mathtools包里的环境，只能放在equation的环境里，不然会报错</p>
+<h2 id="普通表格"><a href="#普通表格" class="headerlink" title="普通表格"></a>普通表格</h2><p>普通表格很好理解</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;|l|c|r|&#125;</span><br><span class="line">\hline</span><br><span class="line">name&amp;money&amp;face\\</span><br><span class="line">\hline</span><br><span class="line">祖安少男&amp;0&amp;thick\\</span><br><span class="line">\hline</span><br><span class="line">\end&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p>在这里插入图片描述<br>{|l|c|r|}指定了表格有3列，4条竖线<br>三个\hline指定了表格有2行，3条行线<br>各个行线之间为每一行内容，每一个属性用&amp;连接</p>
+<p>4.2 三线表<br>三线表是paper里面常见的表格形式，也是很多表格变体的基础。<br>需要导入booktabs</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[!htbp]</span><br><span class="line">	\centering</span><br><span class="line">	\caption&#123;b站最具有影响力的作者&#125;</span><br><span class="line">	\begin&#123;tabular&#125;&#123;ccc&#125;</span><br><span class="line">		\toprule</span><br><span class="line">		&amp;姓名&amp;著作\\</span><br><span class="line">		\midrule</span><br><span class="line">		top1&amp;小猪&amp;《时间管理与多人运动》\\</span><br><span class="line">		top2&amp;窃格瓦拉&amp;《下山:领袖归来》\\</span><br><span class="line">		\bottomrule</span><br><span class="line">	\end&#123;tabular&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+<p>其实细看三线表也是不难理解的，首先其最外面套的环境是{table}，可以把三线表看成是对普通{tabular}进行了<strong>封装</strong>。所以，\caption{}就是三线表额外附加在原先表格之上的标题，\centering表示居中。<br>其次，比较关键的点是{ccc}，它的含义就是表格有<strong>三列</strong>的意思，而且每一列的内容都是居中的。<br>然后不同于普通表格，普通表格的行之间用\hline分割。三线表顾名思义就只有三条行线：\toprule+\midrule+\bottomrule ，这个结构就非常清晰了。<br>三线表主要内容是在\midrule+\bottomrule 之间的，每个列属性之间依旧用&amp;连接.列属性也可以为空的。（如第一行）</p>
+<h2 id="标签与引用"><a href="#标签与引用" class="headerlink" title="标签与引用"></a>标签与引用</h2><p>当paper里面公式很多的时候，文中若想引用远处的某个公式，可以使用\label{}和\ref{}的组合。它能对某个公式、表格、图片指定一个名称，随后可以在文中任何地方引用这个名称。由于这种引用的组合会随着公式的标号的改变而及时变化，因此公式很多的时候会减轻很大的负担。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">	y=\sum^&#123;n&#125;_&#123;i=1&#125;x^&#123;2&#125;+1 \label&#123;eq:here&#125;  %%eq可以也换成tab（表）、fig（图）</span><br><span class="line">\end&#123;equation&#125;</span><br><span class="line">	</span><br><span class="line">我来引用(\ref&#123;eq:here&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="整段代码"><a href="#整段代码" class="headerlink" title="整段代码"></a>整段代码</h2><p>\documentclass[UTF8]{ctexart}<br>\usepackage{mathtools,wallpaper}<br>\usepackage{t1enc}<br>\usepackage{pagecolor}<br>\usepackage{booktabs}</p>
+<p>\begin{document}<br>    %%%去掉页码<br>    %%%\pagestyle{empty}<br>    \title{标题:\LaTeX}<br>    \author{xxx}<br>    \date{62-50-0202}<br>    \maketitle</p>
+<pre><code>%%%要运行两次：第一次加载，第二次新增的条目才能显示
+\tableofcontents
+%%%想要另起一页
+\newpage
+%%%让页码从正文开始
+\setcounter&#123;page&#125;&#123;1&#125;
+\section&#123;\LaTeX 的使用&#125;
+\subsection&#123;\LaTeX 的基本知识&#125;
+\subsubsection&#123;\LaTeX 的结构&#125;
+接下来是列表：
+\begin&#123;enumerate&#125;
+    \item 第一条
+    \item 第二条
+    \item 第三条
+\end&#123;enumerate&#125;
+
+\subsubsection&#123;\LaTeX 文档类型&#125;
+document[UTF8]\&#123;显示大括号\&#125;
+
+第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行第一行
+
+第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行第二行
+
+\subsection&#123;\LaTeX 开始写作&#125;
+开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作
+
+开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作
+
+开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作开始写作
+
+\newpage
+%\thispagestyle&#123;empty&#125;
+
+\subsection&#123;\LaTeX 提升&#125;
+没有页码没有页码没有页码没有页码没有页码没有页码没有页码没有页码没有页码
+
+\textbf&#123;我黑了&#125;
+
+&#123;\normalsize 不大&#125;
+
+&#123;\large 大&#125;
+
+&#123;\Large 大大&#125;
+
+&#123;\LARGE 大大大&#125;
+
+&#123;\huge 大大大大&#125;
+
+&#123;\Huge 大大大大大&#125;
+
+
+&#123;\songti 宋体&#125;
+&#123;\youyuan 幼圆&#125;
+
+
+\begin&#123;center&#125;
+    夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则夹逼准则
+\end&#123;center&#125;
+
+\verb|\|
+%%公式
+%普通公式
+\begin&#123;equation&#125;
+girlfriends=money*face
+\end&#123;equation&#125;
+
+\begin&#123;equation&#125;
+girlfriends=money*face \notag
+\end&#123;equation&#125;
+
+\begin&#123;equation*&#125;
+girlfriends=money*face
+\end&#123;equation*&#125;
+
+\[
+girlfriends=money*face
+\]
+
+%普通公式是没办法换行的,想要一个环境里写多个公式就要用align
+\begin&#123;equation&#125;
+girlfriends=money*face1 \\
+boyfriends=face^n 
+\end&#123;equation&#125;
+
+%换行公式
+\begin&#123;align&#125;
+girlfriends=money*face \notag \\ %%如果想要这一行没标号的话，notag要加在\\之前
+boyfriends=face^n 
+\end&#123;align&#125;
+
+\begin&#123;align&#125;
+&amp;girlfriends=money*face \notag \\ 
+&amp;boyfriends=face^n 
+\end&#123;align&#125;
+
+这是一个众所周知的定理：$girlfriends=money*face$，所以你只能在这里写博客
+
+%公式练习
+\[
+F=ma
+\]
+
+\[
+v=\frac&#123;s&#125;&#123;t&#125;
+\]
+
+\[
+y=e^&#123;x&#125;
+\]
+
+\[
+y=ax^&#123;2&#125;+bx+c
+\]
+
+\[
+F=G\frac&#123;Mm&#125;&#123;r^&#123;2&#125;&#125;
+\]
+
+\[
+y=4\pi\frac&#123;\sin&#123;x&#125;&#125;&#123;\ln&#123;x^&#123;2&#125;&#125;&#125;
+\]
+
+
+\[
+y=\sum^&#123;n&#125;_&#123;i=1&#125;x^&#123;2&#125;+1
+\]
+
+\[
+I=\int^&#123;2&#125;_&#123;1&#125;x^&#123;2&#125;+\tan&#123;x&#125; \mathrm&#123;d&#125;x
+\]
+
+%其他
+\begin&#123;equation*&#125;
+    A=\begin&#123;bmatrix&#125;
+    1&amp;2&amp;3\\
+    4&amp;5&amp;6
+    \end&#123;bmatrix&#125;
+\end&#123;equation*&#125;
+
+\begin&#123;equation*&#125;
+    y=\begin&#123;cases&#125;
+    &amp;\lambda e^&#123;-\lambda x&#125; \\
+    &amp;0
+    \end&#123;cases&#125;
+\end&#123;equation*&#125;
+
+\begin&#123;tabular&#125;&#123;|l|c|r|&#125;
+    \hline
+    name&amp;money&amp;face\\
+    \hline
+    祖安少男&amp;0&amp;thick\\
+    \hline
+\end&#123;tabular&#125;
+
+\begin&#123;table&#125;[!htbp]
+    \centering
+    \caption&#123;b站最具有影响力的作者&#125;
+    \begin&#123;tabular&#125;&#123;ccc&#125;
+        \toprule
+        &amp;姓名&amp;著作\\
+        \midrule
+        top1&amp;小猪&amp;《时间管理与多人运动》\\
+        top2&amp;窃格瓦拉&amp;《下山:领袖归来》\\
+        \bottomrule
+    \end&#123;tabular&#125;
+\end&#123;table&#125;
+
+%标签和引用
+\begin&#123;equation&#125;
+    y=\sum^&#123;n&#125;_&#123;i=1&#125;x^&#123;2&#125;+1 \label&#123;eq:here&#125;
+\end&#123;equation&#125;
+
+我来引用(\ref&#123;eq:here&#125;)
+</code></pre>
+<p>\end{document}</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.sacinal.com">除草剂</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.sacinal.com/2023/01/03/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://www.sacinal.com/2023/01/03/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.sacinal.com" target="_blank">网站</a>！</span></div></div><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/139704027.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/01/08/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/"><img class="prev-cover" src="/pexels-photo-235621.jpeg" onerror="onerror=null;src='/20221207202237.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">鹿原</div></div></a></div><div class="next-post pull-right"><a href="/2022/12/28/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(5)/"><img class="next-cover" src="/pexels-photo-131723.jpeg" onerror="onerror=null;src='/20221207202237.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">地信原理</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tvax3.sinaimg.cn/crop.0.0.600.600.180/008jCdW0ly8h0uorst9t2j30go0gowh2.jpg?KID=imgbed,tva&amp;Expires=1669884832&amp;ssig=d1gkW4Dhau" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">除草剂</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/1265680561"><i class="fab fa-github"></i><span>点点关注</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://s.weibo.com/weibo?q=%E6%B0%B8%E9%9B%8F%E5%A1%94%E8%8F%B2" target="_blank" title=""><i class="fa-brands fa-weibo"></i></a><a class="social-icon" href="https://space.bilibili.com/1265680561" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">关注永雏塔菲喵，关注永雏塔菲谢谢喵</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%B8%AAlatex%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">一个latex简单的语法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-text">声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E5%8C%85"><span class="toc-text">导入包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-text">环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-text">开始写文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#maketitle"><span class="toc-text">maketitle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%A0%E8%8A%82"><span class="toc-text">章节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C"><span class="toc-text">换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89"><span class="toc-text">转义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%91%E4%BD%93"><span class="toc-text">黑体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%8F%B7"><span class="toc-text">字号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%85%E4%B8%AD"><span class="toc-text">居中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5"><span class="toc-text">页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%A6%E8%B5%B7%E4%B8%80%E9%A1%B5"><span class="toc-text">另起一页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E5%8F%B7"><span class="toc-text">页号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E5%85%AC%E5%BC%8F"><span class="toc-text">换行公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%85%AC%E5%BC%8F"><span class="toc-text">行内公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F%E5%91%BD%E4%BB%A4"><span class="toc-text">公式命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%92%8C%E5%A4%A7%E6%8B%AC%E5%8F%B7"><span class="toc-text">矩阵和大括号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E8%A1%A8%E6%A0%BC"><span class="toc-text">普通表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%BC%95%E7%94%A8"><span class="toc-text">标签与引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%AE%B5%E4%BB%A3%E7%A0%81"><span class="toc-text">整段代码</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/04/10/sqlserver/" title="无题"><img src="https://www.sacinal.com/pexels-photo-2775196.jpeg" onerror="this.onerror=null;this.src='/20221207202237.png'" alt="无题"/></a><div class="content"><a class="title" href="/2023/04/10/sqlserver/" title="无题">无题</a><time datetime="2023-04-10T11:42:44.329Z" title="发表于 2023-04-10 19:42:44">2023-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/10/USETC22ACM%E5%88%9D%E9%80%89/" title="无题"><img src="https://www.sacinal.com/pexels-photo-2775196.jpeg" onerror="this.onerror=null;this.src='/20221207202237.png'" alt="无题"/></a><div class="content"><a class="title" href="/2023/04/10/USETC22ACM%E5%88%9D%E9%80%89/" title="无题">无题</a><time datetime="2023-04-10T11:25:15.417Z" title="发表于 2023-04-10 19:25:15">2023-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/10/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(2)/" title="随想"><img src="/pexels-photo-235621.jpeg" onerror="this.onerror=null;this.src='/20221207202237.png'" alt="随想"/></a><div class="content"><a class="title" href="/2023/02/10/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(2)/" title="随想">随想</a><time datetime="2023-02-09T19:04:28.618Z" title="发表于 2023-02-10 03:04:28">2023-02-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/17/blender%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="无题"><img src="https://www.sacinal.com/pexels-photo-2775196.jpeg" onerror="this.onerror=null;this.src='/20221207202237.png'" alt="无题"/></a><div class="content"><a class="title" href="/2023/01/17/blender%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="无题">无题</a><time datetime="2023-01-17T14:40:48.108Z" title="发表于 2023-01-17 22:40:48">2023-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/08/%E6%A6%82%E7%8E%87%E8%AE%BA/" title="无题"><img src="https://www.sacinal.com/pexels-photo-2775196.jpeg" onerror="this.onerror=null;this.src='/20221207202237.png'" alt="无题"/></a><div class="content"><a class="title" href="/2023/01/08/%E6%A6%82%E7%8E%87%E8%AE%BA/" title="无题">无题</a><time datetime="2023-01-08T15:24:48.470Z" title="发表于 2023-01-08 23:24:48">2023-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 除草剂</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
